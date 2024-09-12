@@ -118,8 +118,8 @@ insert into reis (reisID, lennujaam, lennujaamKood, hinnad, reisinumber, sihtkoh
 use reisTAR;
 use reisTAR;
 select reisinumber as '@reisiNumber',  
-	reisinumber,
 	lennujaamKood,
+	reisinumber,
 	lennujaam as 'lennujaamKood/lennujaam',
 	reisiaeg,
 	sihtkoht,
