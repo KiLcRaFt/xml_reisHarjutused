@@ -113,3 +113,13 @@ insert into reis (reisID, lennujaam, lennujaamKood, hinnad, reisinumber, sihtkoh
 insert into reis (reisID, lennujaam, lennujaamKood, hinnad, reisinumber, sihtkoht, ettevotteNimi, reisiaeg) values (98, 'Nausori International Airport', 'FJ-C', 1031.92, '17', 'Olga Bay Seaplane Base', 'Topiclounge', 920);
 insert into reis (reisID, lennujaam, lennujaamKood, hinnad, reisinumber, sihtkoht, ettevotteNimi, reisiaeg) values (99, 'Ifuru Airport', 'MV-13', 37.88, '20', 'Kambuaya Airport', 'Wikibox', 323);
 insert into reis (reisID, lennujaam, lennujaamKood, hinnad, reisinumber, sihtkoht, ettevotteNimi, reisiaeg) values (100, 'Newark Liberty International Airport', 'US-NJ', 458.98, '18', 'OR Tambo International Airport', 'Photobug', 547);
+
+--xml jada loomine
+use reisTAR;
+select reisinumber as '@reisiNumber',  
+	reisinumber,
+	lennujaam as 'lennujaamKood/lennujaam',
+	reisiaeg,
+	sihtkoht,
+	hinnad,
+	ettevotteNimi from reis FOR XML PATH('reis'), ROOT('reisid');
