@@ -116,8 +116,10 @@ insert into reis (reisID, lennujaam, lennujaamKood, hinnad, reisinumber, sihtkoh
 
 --xml jada loomine
 use reisTAR;
+use reisTAR;
 select reisinumber as '@reisiNumber',  
 	reisinumber,
+	lennujaamKood,
 	lennujaam as 'lennujaamKood/lennujaam',
 	reisiaeg,
 	sihtkoht,
